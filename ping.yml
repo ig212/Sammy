@@ -1,7 +1,7 @@
 ---
 # This playbook uses the win_package module to patch sql servers
 - name: ping servers
-  hosts:  dc
+  hosts: dc
   vars:
    ansible_user: sammydapo
    ansible_password: PAssword123
