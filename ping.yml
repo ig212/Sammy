@@ -3,7 +3,7 @@
 - name: ping servers
   hosts: dc
   vars:
-   ansible_user: sammydapo
+   ansible_user: sammydapo@CHUBBY.COM
    ansible_password: PAssword123
    ansible_port: 5985
    ansible_connection: winrm
