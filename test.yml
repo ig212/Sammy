@@ -1,0 +1,19 @@
+---
+# This playbook uses the win_package module to patch sql servers
+- name: ping servers
+  hosts: dc
+  vars:
+   ansible_user: sammydapo@CHUBBY.COM
+   ansible_password: PAssword123
+   ansible_port: 5985
+   ansible_connection: winrm
+   ansible_winrm_server_cert_validation: ignore
+   ansible_winrm_kerberos_delegation: yes
+   ansible_winrm_realm: CHUBBY.COM
+   ansible_winrm_transport: kerberos
+   ansible_winrm_service: HOST
+ 
+  tasks:
+  - name: ping server
+    win_shell: Invoke-Command -Computer JJayRDC -Scriptblock{Get-Date|out-file -filepath C:\DBA\CurrentDate.txt}
+    
