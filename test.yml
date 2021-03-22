@@ -12,6 +12,7 @@
    ansible_winrm_realm: CHUBBY.COM
    ansible_winrm_transport: kerberos
    ansible_winrm_service: HOST
+   ansible_become_method: enabled
  
   tasks:
   - name: ping server
