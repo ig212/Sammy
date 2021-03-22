@@ -15,5 +15,5 @@
  
   tasks:
   - name: ping server
-    win_shell: Invoke-Command -Computer JJayRDC -Scriptblock{Get-Date|out-file -filepath C:\DBA\CurrentDate.txt}
+    win_shell: Invoke-Command -Computer JayRDC -Scriptblock{Get-Date|out-file -filepath C:\DBA\CurrentDate.txt}
     
