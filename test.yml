@@ -17,4 +17,9 @@
   tasks:
   - name: ping server
     win_shell: Invoke-Command -Computer JayRDC -Scriptblock{Get-Date|out-file -filepath C:\DBA\CurrentDate.txt}
+    vars:
+      ansible_become: yes
+      ansible_become_method: runas
+      ansible_become_user: CHUBBY\sammydapo
+      ansible_become_password: PAssword123
     
