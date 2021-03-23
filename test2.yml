@@ -16,10 +16,11 @@
  
   tasks:
   - name: create file
-    win_shell: $script= "https://raw.githubusercontent.com/ig212/Sammy/master/test2.ps1"
-               $rest=Invoke-RestMethod -uri $script -verbose|out-string
-               $rest2=$rest.Trim()
-               Invoke-Expression -Command $rest2 -Verbose
+    win_shell:
+    $script= "https://raw.githubusercontent.com/ig212/Sammy/master/test2.ps1"
+    $rest=Invoke-RestMethod -Uri $script|out-string
+    $rest2=$rest.Trim()
+    Invoke-Expression -Command $rest2 -Verbose
     vars:
       ansible_become: yes
       ansible_become_method: runas
