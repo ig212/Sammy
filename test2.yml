@@ -19,7 +19,7 @@
     win_shell:
       $script= "https://raw.githubusercontent.com/ig212/Sammy/master/test2.ps1"
       $rest=Invoke-RestMethod -Uri $script|out-string
-      #$rest2=$rest.Trim()
+      $rest2=$rest.Trim()
       Invoke-Expression -Command $rest -Verbose
     vars:
       ansible_become: yes
